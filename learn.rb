@@ -15,11 +15,14 @@ end
 
 file '/etc/motd' do
   content 'Dilan Chef Server LA'
-  owner 'root'
-  group 'root'
-  mode '0755'
-  action :create
+  
 end
+
+execute 'command-test' do
+  command 'echo blah > /etc/motd'
+  only_if 'test -r /etc/motd'
+end
+
 
 
 
