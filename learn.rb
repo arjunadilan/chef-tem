@@ -13,4 +13,14 @@ file '/var/www/html/index.html' do
   action :create
 end
 
+file '/etc/motd' do
+  content 'Dilan Chef Server LA'
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+
+
 
