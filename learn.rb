@@ -5,7 +5,7 @@ service 'httpd' do
   action [:start, :enable ]
 end
 
-file '/var/www/index.html' do
+file '/var/www/html/index.html' do
   content 'Hello World'
   owner 'root'
   group 'root'
